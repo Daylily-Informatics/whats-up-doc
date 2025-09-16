@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seqmeta"
+version = "0.1.0"
+description = "FASTQ metadata extraction toolkit"
+readme = "README.md"
+authors = [{name = "ChatGPT"}]
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+seqmeta = "seqmeta.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
