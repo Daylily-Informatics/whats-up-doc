@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "seqmeta"
+name = "whats_up_doc"
 version = "0.1.0"
 description = "FASTQ metadata extraction toolkit"
 readme = "README.md"
@@ -16,7 +16,7 @@ dependencies = []
 test = ["pytest"]
 
 [project.scripts]
-seqmeta = "seqmeta.cli:main"
+whats_up_doc = "whats_up_doc.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

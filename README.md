@@ -1,6 +1,6 @@
 # whats-up-doc
 
-`seqmeta` is a small toolkit for extracting informative metadata from FASTQ files
+`whats_up_doc` is a small toolkit for extracting informative metadata from FASTQ files
 referenced by a simple tab-separated sample sheet. It inspects the sequencing
 headers and read content to produce a JSON report that summarises attributes
 useful for downstream analysis and quality control such as the likely organism,
@@ -27,7 +27,7 @@ metrics.
 
 The heuristics are intentionally conservative and designed to provide guidance
 rather than definitive answers. They can be extended easily by editing
-``seqmeta/constants.py``.
+``whats_up_doc/constants.py``.
 
 ## Installation
 
@@ -52,13 +52,21 @@ is available. Paths may be relative to the location of the sample sheet.
 Run the CLI on the sample sheet to produce a JSON report:
 
 ```bash
-seqmeta path/to/samples.tsv --max-reads 75000 --pretty --output metadata.json
+whats_up_doc path/to/samples.tsv --max-reads 75000 --pretty --output metadata.json
 ```
 
 * ``--max-reads`` controls how many reads are sampled from each FASTQ file (the
   default is 50,000).
 * ``--pretty`` toggles human-readable JSON indentation.
 * ``--output`` writes the report to a file instead of printing to stdout.
+
+All of the CLI functionality is also available programmatically. For example:
+
+```python
+from whats_up_doc import analyze_samplesheet
+
+report = analyze_samplesheet("path/to/samples.tsv", max_reads=75000)
+```
 
 ## Development
 

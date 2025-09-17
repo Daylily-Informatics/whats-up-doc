@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from seqmeta.samplesheet import SampleSheet
+from whats_up_doc.samplesheet import SampleSheet
 
 from .utils import example_paired_reads, write_fastq
 
