@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from seqmeta.analysis import analyze_sample
-from seqmeta.samplesheet import SampleEntry
+from whats_up_doc.analysis import analyze_sample
+from whats_up_doc.samplesheet import SampleEntry
 
 from .utils import example_paired_reads, write_fastq
 
